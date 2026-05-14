@@ -1,0 +1,79 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f172a;
+    color:white;
+}
+
+.navbar{
+    background:#1e293b;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:#111827;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.container{
+    width:85%;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    margin:20px 0;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+input,select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:5px;
+    border:none;
+}
+
+.form-container{
+    width:400px;
+    margin:100px auto;
+    background:#1e293b;
+    padding:30px;
+    border-radius:10px;
+}
+
+.result-box{
+    text-align:center;
+    background:#1e293b;
+    padding:30px;
+    border-radius:10px;
+}

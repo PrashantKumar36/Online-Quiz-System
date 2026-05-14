@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Quiz</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+   <h1>{{ quiz.category }} Quiz</h1>
+
+<h3>
+
+    Logged in as:
+    
+    {{ username }}
+
+</h3>
+    <h2 id="timer">
+
+        Time Left: 120
+
+    </h2>
+
+    <form method="POST"
+    id="quizForm">
+
+        {% for q in questions %}
+
+        <div class="card">
+
+            <h3>{{ q.question }}</h3>
+
+            <label>
+
+                <input type="radio"
+                name="{{ q.id }}"
+                value="{{ q.option1 }}">
+
+                {{ q.option1 }}
+
+            </label>
+
+            <br><br>
+
+            <label>
+
+                <input type="radio"
+                name="{{ q.id }}"
+                value="{{ q.option2 }}">
+
+                {{ q.option2 }}
+
+            </label>
+
+            <br><br>
+
+            <label>
+
+                <input type="radio"
+                name="{{ q.id }}"
+                value="{{ q.option3 }}">
+
+                {{ q.option3 }}
+
+            </label>
+
+            <br><br>
+
+            <label>
+
+                <input type="radio"
+                name="{{ q.id }}"
+                value="{{ q.option4 }}">
+
+                {{ q.option4 }}
+
+            </label>
+
+        </div>
+
+        {% endfor %}
+
+        <button type="submit">
+
+            Submit Quiz
+
+        </button>
+
+    </form>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

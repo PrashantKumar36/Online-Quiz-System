@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+    <h3>
+
+    Welcome,
+    
+    {{ username }}
+
+</h3>
+    <h2>Student Dashboard</h2>
+
+    <a href="/logout">
+
+        Logout
+
+    </a>
+
+</div>
+
+<div class="container">
+
+    <h1>Available Quizzes</h1>
+
+    {% for quiz in quizzes %}
+
+    <div class="card">
+
+        <h2>{{ quiz.category }}</h2>
+
+        <a href="/quiz/{{ quiz.id }}">
+
+            <button>
+
+                Start Quiz
+
+            </button>
+
+        </a>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+</body>
+
+</html>
